@@ -2,6 +2,7 @@
 
 ## 概述：本项目研究使用MCP（Memory Consolidation Process）增强的链式思考大语言模型来生成个体时空活动模式的方法。
 
+```text
 spatiotemporal-activity-generation-mcp-cot/
 ├── src/                          # 源代码
 │   ├── models/                   # 模型实现
@@ -22,6 +23,7 @@ spatiotemporal-activity-generation-mcp-cot/
 ├── notebooks/                    # Jupyter笔记本
 ├── docs/                         # 文档
 └── deployment/                   # 部署相关
+```
 
 ## 快速开始
 

@@ -1,0 +1,121 @@
+# ================================
+# 模型配置文件
+# ================================
+
+# 支持的基础模型配置
+models:
+  # GLM-4-9B 模型配置
+  glm-4-9b:
+    model_path: "THUDM/glm-4-9b-chat"           # HuggingFace模型路径
+    model_type: "glm"                            # 模型类型标识
+    lora_target_modules:                         # LoRA目标模块
+      - "q_proj"
+      - "v_proj" 
+      - "k_proj"
+      - "o_proj"
+    
+  # DeepSeek-R1-7B 模型配置
+  deepseek-r1-7b:
+    model_path: "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
+    model_type: "deepseek"
+    lora_target_modules:
+      - "q_proj"
+      - "v_proj"
+      - "k_proj" 
+      - "o_proj"
+    
+  # LLAMA-2-13B 模型配置
+  llama2-13b:
+    model_path: "meta-llama/Llama-2-13b-chat-hf"
+    model_type: "llama"
+    lora_target_modules:
+      - "q_proj"
+      - "v_proj"
+    
+  # BLOOM-7B 模型配置
+  bloom-7b:
+    model_path: "bigscience/bloom-7b1"
+    model_type: "bloom"
+    lora_target_modules:
+      - "query_key_value"
+
+# 训练数据路径配置
+data_paths:
+  # 时空行为专业知识数据
+  spatiotemporal_knowledge: "data/knowledge/spatiotemporal_behavior_alpaca.json"
+  
+  # 本地化行为数据（陆家嘴区域）
+  local_behavior_data: "data/local/lujiazui_behavior_alpaca.json"
+  
+  # CoT推理示例数据
+  cot_demonstrations: "data/cot/reasoning_examples_alpaca.json"
+  
+  # MCP工具使用训练数据
+  mcp_training_data: "data/mcp/tool_usage_alpaca.json"
+
+# 输出路径配置
+output_paths:
+  # 微调后的完整模型保存路径
+  fine_tuned_models: "models/fine_tuned"
+  
+  # LoRA适配器权重保存路径
+  lora_adapters: "models/lora_adapters"
+  
+  # 训练日志保存路径
+  logs: "logs"
+  
+  # 训练检查点保存路径
+  checkpoints: "checkpoints"
+
+# 默认训练参数（可被代码中的ModelConfig覆盖）
+default_training_params:
+  # 基础生成参数
+  max_length: 9216                    # 最大序列长度
+  temperature: 0.7                    # 生成温度
+  top_p: 0.9                         # nucleus sampling参数
+  top_k: 50                          # top-k sampling参数
+  repetition_penalty: 1.1            # 重复惩罚因子
+  
+  # 硬件配置
+  device: "auto"                     # 设备选择：auto/cuda/cpu
+  load_in_8bit: false               # 是否使用8bit量化
+  load_in_4bit: false               # 是否使用4bit量化
+  torch_dtype: "float16"            # 数据类型：float16/float32
+  trust_remote_code: true           # 是否信任远程代码
+  
+  # LoRA配置
+  use_lora: true                    # 是否使用LoRA
+  lora_r: 16                        # LoRA rank
+  lora_alpha: 32                    # LoRA alpha
+  lora_dropout: 0.1                 # LoRA dropout率
+  
+  # 训练超参数
+  learning_rate: 5e-5               # 学习率
+  batch_size: 6                     # 批次大小
+  gradient_accumulation_steps: 1     # 梯度累积步数
+  num_epochs: 3                     # 训练轮数
+  warmup_steps: 100                 # 预热步数
+  save_steps: 100                   # 保存间隔步数
+  
+  # 数据处理参数
+  max_samples_per_task: 1000        # 每个任务的最大样本数
+  train_ratio: 0.8                  # 训练集比例
+  min_length: 50                    # 最小序列长度
+  
+# 环境配置
+environment:
+  # 缓存目录
+  cache_dir: "models/cache"
+  
+  # 临时文件目录
+  temp_dir: "temp"
+  
+  # 是否使用混合精度训练
+  fp16: true
+  
+  # 是否禁用wandb等实验跟踪
+  report_to: "none"
+  
+  # 数据加载器配置
+  dataloader_pin_memory: false
+  dataloader_num_workers: 4

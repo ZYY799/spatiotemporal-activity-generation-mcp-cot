@@ -1,0 +1,98 @@
+"""
+MCP Tools Configuration for Spatiotemporal Behavior Generation
+"""
+
+mcp_tools:
+  temporal_management:
+    enabled: true
+    capabilities:
+      - time_query
+      - schedule_optimization
+      - duration_estimation
+      - temporal_conflict_detection
+      - activity_timing_suggestion
+      - schedule_feasibility_check
+  spatial_navigation:
+    enabled: true
+    capabilities:
+      - poi_search
+      - route_planning
+      - distance_calculation
+      - location_recommendation
+      - accessibility_analysis
+      - spatial_clustering
+    parameters:
+      default_search_radius: 3000  # meters
+      max_travel_distance: 50000  # meters
+      transport_modes:
+        - walking
+        - cycling
+        - public_transit
+        - car
+        - taxi
+      lujiazui_bounds:
+        lat_min: 31.235
+        lat_max: 31.250
+        lon_min: 121.495
+        lon_max: 121.520
+
+  environmental_perception:
+    enabled: true
+    capabilities:
+      - weather_query
+      - event_detection
+      - crowd_density_estimation
+      - environmental_suitability
+      - seasonal_analysis
+      - air_quality_check
+    parameters:
+      weather_update_interval: 3600  # seconds
+      crowd_density_levels:
+        low: 0.2
+        medium: 0.5
+        high: 0.8
+      environmental_factors:
+        - weather
+        - temperature
+        - precipitation
+        - air_quality
+        - crowd_level
+        - special_events
+
+  social_collaboration:
+    enabled: true
+    capabilities:
+      - contact_management
+      - activity_coordination
+      - social_recommendation
+      - group_scheduling
+      - relationship_analysis
+      - social_context_query
+    parameters:
+      max_group_size: 8
+      social_network_depth: 3
+      relationship_types:
+        - family
+        - close_friends
+        - colleagues
+        - acquaintances
+
+  experience_evaluation:
+    enabled: true
+    capabilities:
+      - activity_evaluation
+      - location_assessment
+      - route_evaluation
+      - satisfaction_analysis
+      - recommendation_scoring
+      - experience_comparison
+    parameters:
+      evaluation_criteria:
+        - satisfaction
+        - duration
+        - cost
+        - accessibility
+        - convenience
+        - ambiance
+      scoring_scale: [0, 10]
+      confidence_threshold: 0.7

@@ -1,0 +1,136 @@
+"""
+Generation Parameters for Spatiotemporal Behavior Generation
+"""
+
+generation:
+  model_settings:
+    temperature: 0.7
+    max_tokens: 9216
+    top_p: 0.9
+    frequency_penalty: 0.1
+    presence_penalty: 0.1
+
+  behavior_generation:
+    max_activities_per_day: 8
+    min_activity_duration: 15  # minutes
+    daily_time_window: [6, 23]  # hours
+    reasoning_depth: "detailed"  # "basic", "detailed", "comprehensive"
+
+  quality_control:
+    min_trajectory_quality: 0.5
+    max_generation_attempts: 3
+    validation_enabled: true
+    error_tolerance: 0.1
+
+  parallel_processing:
+    max_workers: 8
+    batch_size: 10
+    memory_limit_gb: 8
+    timeout_seconds: 300
+    enable_progress_tracking: true
+
+  output_settings:
+    save_reasoning_chains: true
+    save_intermediate_results: false
+    output_format: "json"  # "json", "csv", "pickle"
+    compression: false
+
+cot_reasoning:
+  stages:
+    situational_awareness:
+      enabled: true
+      depth: "comprehensive"
+      max_factors: 10
+
+    constraint_identification:
+      enabled: true
+      constraint_types:
+        - temporal
+        - spatial
+        - resource
+        - personal
+        - environmental
+      priority_weighting: true
+
+    option_generation:
+      enabled: true
+      min_options: 3
+      max_options: 10
+      generation_strategies:
+        - memory_based
+        - preference_based
+        - constraint_optimized
+        - novel_exploration
+
+    multifactor_evaluation:
+      enabled: true
+      evaluation_dimensions:
+        - preference_alignment: 0.40
+        - constraint_satisfaction: 0.25
+        - expected_outcomes: 0.20
+        - risk_assessment: 0.10
+        - opportunity_cost: 0.05
+      sensitivity_analysis: true
+
+    decision_formation:
+      enabled: true
+      confidence_threshold: 0.6
+      contingency_planning: true
+      consequence_prediction: true
+
+memory_system:
+  architecture:
+    event_memory:
+      capacity: 1000
+      retention_period_days: 365
+      importance_threshold: 0.3
+
+    pattern_memory:
+      min_frequency_threshold: 3
+      confidence_threshold: 0.7
+      update_frequency: "daily"
+
+    summary_memory:
+      categories:
+        - temporal_preference
+        - spatial_preference
+        - activity_preference
+        - social_preference
+      strength_decay_rate: 0.01
+      reinforcement_rate: 0.1
+
+  consolidation:
+    sleep_consolidation_enabled: true
+    consolidation_frequency: "weekly"
+    compression_ratio: 0.3
+    knowledge_distillation: true
+
+evaluation:
+  quality_assessment:
+    criteria:
+      temporal_consistency: 0.25
+      activity_coherence: 0.25
+      spatial_realism: 0.20
+      behavioral_authenticity: 0.20
+      constraint_satisfaction: 0.10
+
+    quality_levels:
+      excellent: [0.85, 1.0]
+      good: [0.70, 0.85]
+      average: [0.55, 0.70]
+      poor: [0.40, 0.55]
+      very_poor: [0.0, 0.40]
+
+  diversity_metrics:
+    pattern_diversity_threshold: 0.7
+    activity_diversity_weight: 0.3
+    temporal_diversity_weight: 0.3
+    spatial_diversity_weight: 0.4
+
+  benchmarking:
+    reference_data_enabled: false
+    comparative_analysis: true
+    statistical_tests:
+      - kolmogorov_smirnov
+      - jensen_shannon_divergence
+      - chi_square

@@ -1,63 +1,72 @@
 # MCP-Enhanced Chain-of-Thought Spatiotemporal Behavior Generation Framework
 
-A comprehensive framework for generating realistic individual spatiotemporal behaviors using Model Context Protocol (MCP) enhanced Chain-of-Thought reasoning with Large Language Models.
+<div align="center">
 
----
-**Disclaimer:**
+[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://python.org/) [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://claude.xiaoai.shop/chat/LICENSE) [![arXiv](https://img.shields.io/badge/arXiv-2506.10853-b31b1b.svg?style=for-the-badge&logo=arxiv)](https://arxiv.org/abs/2506.10853) [![Demo](https://img.shields.io/badge/%F0%9F%8C%90_Live_Demo-Available-brightgreen.svg?style=for-the-badge)](http://117.72.208.136/)
 
-Due to time constraints and limited personal bandwidth, portions of this codebase have not been fully organized into a production-ready, open-source project. The current repository primarily represents a structural reorganization of previously written code, which may contain unforeseen bugs and some unmodified logic implementations.
+[![GitHub stars](https://img.shields.io/github/stars/your-repo/mcp-cot-framework?style=social)](https://github.com/your-repo/mcp-cot-framework) [![GitHub forks](https://img.shields.io/github/forks/your-repo/mcp-cot-framework?style=social)](https://github.com/your-repo/mcp-cot-framework)
 
-**Important Notes:**
+</div>
 
-- This code is provided **for reference purposes only**
-- Some methods and implementations may not reflect the latest updates
-- Potential bugs and logic inconsistencies may exist throughout the codebase
-- For accurate functionality demonstration, please refer to the live demo site: [demo website](http://117.72.208.136/)
-- Due to the non-deterministic nature of training data and LLM outputs, some features may not be fully reproducible
-- Actual performance should be evaluated through your own deployment and testing
-- The MCP (Model Context Protocol) components will be open-sourced and deployed in subsequent releases
+> 🚀 A comprehensive framework for generating realistic individual spatiotemporal behaviors using Model Context Protocol (MCP) enhanced Chain-of-Thought reasoning with Large Language Models.
 
-**Recommendation:**
+------
+
+## ⚠️ **Disclaimer**
+
+> 📝 Due to time constraints and limited personal bandwidth, portions of this codebase have not been fully organized into a production-ready, open-source project. The current repository primarily represents a structural reorganization of previously written code, which may contain unforeseen bugs and some unmodified logic implementations.
+
+**🔍 Important Notes:**
+
+- 📖 This code is provided **for reference purposes only**
+- 🔄 Some methods and implementations may not reflect the latest updates
+- 🐛 Potential bugs and logic inconsistencies may exist throughout the codebase
+- 🌐 For accurate functionality demonstration, please refer to the live demo site: [demo website](http://117.72.208.136/)
+- 🎲 Due to the non-deterministic nature of training data and LLM outputs, some features may not be fully reproducible
+- 📊 Actual performance should be evaluated through your own deployment and testing
+- 🔧 The MCP (Model Context Protocol) components will be open-sourced and deployed in subsequent releases
+
+**💡 Recommendation:**
 
 Please conduct thorough testing in your own environment before any use.
 
-## Overview
+## 🌟 Overview
 
 This framework implements the methodology described in "A Study on Individual Spatiotemporal Activity Generation Method Using MCP-Enhanced Chain-of-Thought Large Language Models" for generating authentic human activity-travel patterns in urban environments.
 
-### Key Features
+### ✨ Key Features
 
-- **MCP-Enhanced Tool System**: Six specialized tool categories for comprehensive spatiotemporal reasoning
-- **Five-Stage CoT Reasoning**: Systematic decision-making process mimicking human cognition
-- **Personal Memory System**: Three-tier memory architecture with dynamic consolidation
-- **Parallel Processing**: Scalable generation for large populations
-- **Quality Evaluation**: Comprehensive assessment across multiple dimensions
-- **Zero-Shot Deployment**: Works without additional training data
+- 🛠️ **MCP-Enhanced Tool System**: Six specialized tool categories for comprehensive spatiotemporal reasoning
+- 🧠 **Five-Stage CoT Reasoning**: Systematic decision-making process mimicking human cognition
+- 💾 **Personal Memory System**: Three-tier memory architecture with dynamic consolidation
+- ⚡ **Parallel Processing**: Scalable generation for large populations
+- 📈 **Quality Evaluation**: Comprehensive assessment across multiple dimensions
+- 🎯 **Zero-Shot Deployment**: Works without additional training data
 
-## Architecture
+## 🏗️ Architecture
 
 ```
-mcp-cot-framework/
-├── main.py                           # Main program entry
-├── requirements.txt                  # Dependencies
-├── config/
-│   ├── models.yaml                   # Model configuration
-│   ├── mcp_config.yaml              # MCP tools configuration
-│   └── generation_config.yaml       # Generation parameters
-├── models/                           # Model management
-├── data/                            # Data and knowledge bases
-├── memory/                          # Personal memory system
-├── mcp_tools/                       # MCP tool categories
-├── cot_reasoning/                   # Chain-of-thought engine
-├── generator/                       # Behavior generation engine
-├── parallel/                        # Parallel processing system
-├── evaluation/                      # Quality evaluation system
-└── utils/                          # Utility functions
+📦 mcp-cot-framework/
+├── 🚀 main.py                           # Main program entry
+├── 📋 requirements.txt                  # Dependencies
+├── ⚙️ config/
+│   ├── 🤖 models.yaml                   # Model configuration
+│   ├── 🔧 mcp_config.yaml              # MCP tools configuration
+│   └── 🎛️ generation_config.yaml       # Generation parameters
+├── 🤖 models/                           # Model management
+├── 📊 data/                            # Data and knowledge bases
+├── 🧠 memory/                          # Personal memory system
+├── 🛠️ mcp_tools/                       # MCP tool categories
+├── 💭 cot_reasoning/                   # Chain-of-thought engine
+├── 🏭 generator/                       # Behavior generation engine
+├── ⚡ parallel/                        # Parallel processing system
+├── 📊 evaluation/                      # Quality evaluation system
+└── 🔧 utils/                          # Utility functions
 ```
 
-## Quick Start
+## 🚀 Quick Start
 
-### 1. Installation
+### 1. 📦 Installation
 
 ```bash
 # Clone the repository
@@ -71,7 +80,7 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-### 2. Basic Usage
+### 2. 💻 Basic Usage
 
 Generate spatiotemporal behaviors for 50 people:
 
@@ -89,7 +98,7 @@ python main.py --num-people 50 --target-date 2024-01-15 --mode generate
 python main.py --mode evaluate --target-date 2024-01-15
 ```
 
-### 3. Python API Usage
+### 3. 🐍 Python API Usage
 
 ```python
 from main import MCPCoTApplication
@@ -112,14 +121,15 @@ print(f"Generated {len(trajectories)} trajectories")
 print(f"Quality score: {quality_results['evaluation_summary']['overall_score']:.3f}")
 ```
 
-## Core Components
+## 🧩 Core Components
 
-### Memory System
+### 🧠 Memory System
 
 Three-tier memory architecture:
-- **Event Memory**: Specific activity experiences
-- **Pattern Memory**: Behavioral regularities
-- **Summary Memory**: Abstract preferences and habits
+
+- 📝 **Event Memory**: Specific activity experiences
+- 🔄 **Pattern Memory**: Behavioral regularities
+- 📊 **Summary Memory**: Abstract preferences and habits
 
 ```python
 from memory import PersonalMemoryManager
@@ -128,15 +138,16 @@ memory_manager = PersonalMemoryManager("person_001")
 memories = memory_manager.retrieve_relevant_memories(context, k=5)
 ```
 
-### MCP Tools
+### 🛠️ MCP Tools
 
 Six specialized tool categories:
-- **Temporal Management**: Time-related queries and scheduling
-- **Spatial Navigation**: Location search and route planning
-- **Environmental Perception**: Weather and environmental conditions
-- **Social Collaboration**: Social interaction and group coordination
-- **Experience Evaluation**: Activity and location assessment
-- **Personal Memory**: Individual memory management
+
+- ⏰ **Temporal Management**: Time-related queries and scheduling
+- 🗺️ **Spatial Navigation**: Location search and route planning
+- 🌤️ **Environmental Perception**: Weather and environmental conditions
+- 👥 **Social Collaboration**: Social interaction and group coordination
+- ⭐ **Experience Evaluation**: Activity and location assessment
+- 🧠 **Personal Memory**: Individual memory management
 
 ```python
 from mcp_tools import MCPToolManager, MCPMessage
@@ -146,14 +157,15 @@ query = MCPMessage(message_type="query", data={"query_type": "poi_search"})
 response = tool_manager.process_query("spatial", query)
 ```
 
-### Chain-of-Thought Reasoning
+### 💭 Chain-of-Thought Reasoning
 
 Five-stage cognitive framework:
-1. **Situational Awareness**: Analyze current context
-2. **Constraint Identification**: Identify limitations and goals
-3. **Option Generation**: Create and screen alternatives
-4. **Multi-factor Evaluation**: Comprehensive assessment
-5. **Decision Formation**: Final decision and contingency planning
+
+1. 🔍 **Situational Awareness**: Analyze current context
+2. ⚠️ **Constraint Identification**: Identify limitations and goals
+3. 💡 **Option Generation**: Create and screen alternatives
+4. ⚖️ **Multi-factor Evaluation**: Comprehensive assessment
+5. ✅ **Decision Formation**: Final decision and contingency planning
 
 ```python
 from cot_reasoning import ChainOfThoughtEngine, ReasoningContext
@@ -162,7 +174,7 @@ reasoning_engine = ChainOfThoughtEngine(tool_manager, memory_manager)
 result = reasoning_engine.execute_reasoning_chain(context, "select_lunch_location")
 ```
 
-### Behavior Generation
+### 🏭 Behavior Generation
 
 Main generation engine integrating all components:
 
@@ -179,9 +191,9 @@ generator = SpatiotemporalBehaviorGenerator(
 trajectory = generator.generate_daily_trajectory(person_profile, target_date)
 ```
 
-## Configuration
+## ⚙️ Configuration
 
-### Generation Configuration
+### 🎛️ Generation Configuration
 
 Configure generation parameters in `config/generation_config.yaml`:
 
@@ -202,7 +214,7 @@ generation:
     memory_limit_gb: 8
 ```
 
-### MCP Tools Configuration
+### 🔧 MCP Tools Configuration
 
 Configure MCP tools in `config/mcp_config.yaml`:
 
@@ -221,64 +233,77 @@ mcp_tools:
       max_travel_distance: 50000
 ```
 
-## Evaluation
+## 📊 Evaluation
 
 The framework provides comprehensive quality evaluation:
 
-- **Temporal Consistency**: Logical temporal ordering
-- **Activity Coherence**: Logical activity sequences
-- **Spatial Realism**: Realistic spatial patterns
-- **Behavioral Authenticity**: Authentic human patterns
-- **Constraint Satisfaction**: Adherence to constraints
+- ⏰ **Temporal Consistency**: Logical temporal ordering
+- 🔗 **Activity Coherence**: Logical activity sequences
+- 🗺️ **Spatial Realism**: Realistic spatial patterns
+- 👤 **Behavioral Authenticity**: Authentic human patterns
+- ✅ **Constraint Satisfaction**: Adherence to constraints
 
 Quality scores range from 0-10 with classifications:
-- Excellent: 8.5-10
-- Good: 7.0-8.4
-- Average: 5.5-6.9
-- Poor: 4.0-5.4
-- Very Poor: 0-3.9
 
-## Performance
+| Score Range | Classification | Badge                                                        |
+| ----------- | -------------- | ------------------------------------------------------------ |
+| 8.5-10      | Excellent      | ![Excellent](https://img.shields.io/badge/Quality-Excellent-brightgreen) |
+| 7.0-8.4     | Good           | ![Good](https://img.shields.io/badge/Quality-Good-green)     |
+| 5.5-6.9     | Average        | ![Average](https://img.shields.io/badge/Quality-Average-yellow) |
+| 4.0-5.4     | Poor           | ![Poor](https://img.shields.io/badge/Quality-Poor-orange)    |
+| 0-3.9       | Very Poor      | ![Very Poor](https://img.shields.io/badge/Quality-Very_Poor-red) |
+
+## ⚡ Performance
+
+<div align="center">
+
+![Performance](https://img.shields.io/badge/Workers-12_Max-blue?style=flat-square&logo=server) ![Speed](https://img.shields.io/badge/Speed-0.17_min/sample-green?style=flat-square&logo=speedometer) ![Memory](https://img.shields.io/badge/Memory-Optimized-orange?style=flat-square&logo=memory) ![Success Rate](https://img.shields.io/badge/Success_Rate-95%25+-brightgreen?style=flat-square&logo=checkmark)
+
+</div>
 
 Parallel processing capabilities:
-- **Scalable**: Up to 12 parallel workers tested
-- **Efficient**: 0.17 minutes per sample at 12 workers
-- **Memory Optimized**: Configurable memory limits
-- **Error Tolerant**: Graceful failure handling
+
+- ⚡ **Scalable**: Up to 12 parallel workers tested
+- 🚀 **Efficient**: 0.17 minutes per sample at 12 workers
+- 💾 **Memory Optimized**: Configurable memory limits
+- 🛡️ **Error Tolerant**: Graceful failure handling
 
 Performance metrics:
-- Generation speed: 77% reduction (2→12 workers)
-- Memory usage: Scales predictably
-- Success rate: >95% under normal conditions
 
-## Use Cases
+- 📈 Generation speed: 77% reduction (2→12 workers)
+- 💾 Memory usage: Scales predictably
+- ✅ Success rate: >95% under normal conditions
 
-1. **Urban Planning**: Simulate pedestrian flows and activity patterns
-2. **Transportation Management**: Predict mobility demands
-3. **Commercial Site Selection**: Understand customer behavior patterns
-4. **Smart City Development**: Model citizen activity needs
-5. **Emergency Planning**: Simulate population responses
-6. **Social Research**: Study behavioral patterns and trends
+## 🎯 Use Cases
 
-## Data Requirements
+| Use Case                      | Icon | Description                                     |
+| ----------------------------- | ---- | ----------------------------------------------- |
+| **Urban Planning**            | 🏙️    | Simulate pedestrian flows and activity patterns |
+| **Transportation Management** | 🚌    | Predict mobility demands                        |
+| **Commercial Site Selection** | 🏪    | Understand customer behavior patterns           |
+| **Smart City Development**    | 🌐    | Model citizen activity needs                    |
+| **Emergency Planning**        | 🚨    | Simulate population responses                   |
+| **Social Research**           | 📊    | Study behavioral patterns and trends            |
 
-### Minimum Data
+## 📊 Data Requirements
 
-- Geographic boundaries (POI locations)
-- Basic activity type definitions
-- Temporal constraints (business hours, etc.)
+### 📋 Minimum Data
 
-### Enhanced Data
+- 🗺️ Geographic boundaries (POI locations)
+- 📝 Basic activity type definitions
+- ⏰ Temporal constraints (business hours, etc.)
 
-- Historical mobile signaling data
-- Activity diary surveys
-- POI ratings and reviews
-- Transportation network data
-- Weather and event data
+### 🚀 Enhanced Data
 
-## Extending the Framework
+- 📱 Historical mobile signaling data
+- 📖 Activity diary surveys
+- ⭐ POI ratings and reviews
+- 🚗 Transportation network data
+- 🌤️ Weather and event data
 
-### Adding New MCP Tools
+## 🔧 Extending the Framework
+
+### 🛠️ Adding New MCP Tools
 
 1. Inherit from `BaseMCPTool`
 2. Implement required methods
@@ -299,7 +324,7 @@ class CustomTool(BaseMCPTool):
         return ["custom_capability"]
 ```
 
-### Custom Reasoning Stages
+### 🧠 Custom Reasoning Stages
 
 Extend the CoT reasoning engine:
 
@@ -312,7 +337,7 @@ class CustomReasoningEngine(ChainOfThoughtEngine):
         pass
 ```
 
-### Custom Evaluation Metrics
+### 📊 Custom Evaluation Metrics
 
 Add custom quality metrics:
 
@@ -325,16 +350,18 @@ class CustomEvaluator(SpatiotemporalQualityEvaluator):
         pass
 ```
 
-## Troubleshooting
+## 🐛 Troubleshooting
 
-### Common Issues
+### ❗ Common Issues
 
-1. **Memory Errors**: Reduce batch size or max workers
-2. **Generation Failures**: Check model configuration and API access
-3. **Quality Issues**: Verify knowledge base and memory initialization
-4. **Performance Issues**: Optimize parallel processing settings
+| Issue                   | Icon | Solution                                        |
+| ----------------------- | ---- | ----------------------------------------------- |
+| **Memory Errors**       | 💾    | Reduce batch size or max workers                |
+| **Generation Failures** | ❌    | Check model configuration and API access        |
+| **Quality Issues**      | ⚠️    | Verify knowledge base and memory initialization |
+| **Performance Issues**  | 🐌    | Optimize parallel processing settings           |
 
-### Debug Mode
+### 🔍 Debug Mode
 
 Enable detailed logging:
 
@@ -343,7 +370,7 @@ app = MCPCoTApplication("config/generation_config.yaml")
 app.config['logging'] = {'level': 'DEBUG'}
 ```
 
-### Memory Management
+### 💾 Memory Management
 
 Monitor memory usage:
 
@@ -352,7 +379,7 @@ Monitor memory usage:
 python main.py --num-people 100 --mode complete --config config/low_memory_config.yaml
 ```
 
-## Citation
+## 📚 Citation
 
 If you use this framework in your research, please cite:
 
@@ -368,16 +395,27 @@ If you use this framework in your research, please cite:
 }
 ```
 
-## License
+## 📄 License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+## 🙏 Acknowledgments
 
-## Acknowledgments
+- 👥 Thanks to all contributors and researchers in spatiotemporal behavior modeling
+- 🏗️ Built upon foundational work in time geography and activity-based modeling
+- 🤖 Leverages advances in large language models and chain-of-thought reasoning
+- 💡 Grateful to our advisor and lab mates for their invaluable guidance
 
-- Thanks to all contributors and researchers in spatiotemporal behavior modeling
-- Built upon foundational work in time geography and activity-based modeling
-- Leverages advances in large language models and chain-of-thought reasoning
-- Grateful to our advisor and lab mates for their invaluable guidance.
+------
 
----
+<div align="center">
+
+**🌟 Star this repo if you find it helpful! 🌟**
+
+[![GitHub stars](https://img.shields.io/github/stars/your-repo/mcp-cot-framework?style=social)](https://github.com/your-repo/mcp-cot-framework) [![Twitter Follow](https://img.shields.io/twitter/follow/yourusername?style=social)](https://twitter.com/yourusername)
+
+Made with ❤️ by the Research Team
+
+</div>
